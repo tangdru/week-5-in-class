@@ -11,9 +11,27 @@ var canvas = d3.select('.canvas')
     .append('g')
     .attr('transform','translate('+margin.l+','+margin.t+')');
 
-console.log("Start to load data...")
+
 
 //Start to load data
-d3.csv('data/data.csv',function(err,rows){
-    console.log(rows);
-})
+d3.csv('data/data.csv',
+    function(d){
+        console.log(d);
+
+        var newRow = {
+            x:+d.x,
+            y:+d.y,
+            r:+d.r
+        };
+
+        return newRow;
+    },
+    function(err,rows) {
+
+        console.log(rows);
+
+
+
+    })
+
+
