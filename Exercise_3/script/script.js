@@ -57,7 +57,7 @@ d3.csv('data/world_bank_2013.csv',
 
             node
                 .append('circle')
-                .attr('r',12 /*country.gdp/100000000000*/)
+                .attr('r',country.gdp/95555000000)
                 .style('fill','rgb(40,100,200)')
                 .style('fill-opacity',.5);
 
@@ -66,7 +66,7 @@ d3.csv('data/world_bank_2013.csv',
                 .style('font-size','10px')
                 .style('fill','rgb(0,0,100)')
                 .style('font-weight','thin')
-                .text(country.ctr+country.pctUser);
+                .text(country.ctr+" "+country.pctUser);
 
 
         })
