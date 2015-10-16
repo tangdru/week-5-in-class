@@ -59,14 +59,16 @@ d3.csv('data/world_bank_2013.csv',
                 .append('circle')
                 .attr('r',country.gdp/95555000000)
                 .style('fill','rgb(40,100,200)')
-                .style('fill-opacity',.5);
+                .style('fill-opacity',.5)
+                /*.style('z-index', 100)*/;
 
             node
                 .append('text')
                 .style('font-size','10px')
                 .style('fill','rgb(0,0,100)')
                 .style('font-weight','thin')
-                .text(country.ctr+" "+country.pctUser);
+                .text(country.ctr+" "+country.pctUser)
+                /*.style('z-index', 99)*/;
 
 
         })
@@ -78,8 +80,10 @@ d3.csv('data/world_bank_2013.csv',
                 .attr('x2',x)
                 .attr('y1',0-margin.t)
                 .attr('y2',height+margin.t)
-                .style('stroke','rgb(80,80,80)')
-                .style('stroke-width','1px');
+                .style('stroke','rgb(230,230,230)')
+                .style('stroke-width','1px')
+                .style('stroke-opacity',.5)
+                /*.style('z-index', 80)*/;
 
            /*canvas
                 .append('text')
